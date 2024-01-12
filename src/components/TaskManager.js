@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SimpleNavbar from "./SimpleNavbar";
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState([]);
@@ -46,6 +47,9 @@ const TaskManager = () => {
 
   return (
     <div className="task-manager bg-gray-100">
+      <section>
+        <div className="Navbar">{<SimpleNavbar />}</div>
+      </section>
       <h2 className="text-2xl font-bold">Task Manager</h2>
       <form onSubmit={handleNewTaskSubmit} className="mb-4">
         <input

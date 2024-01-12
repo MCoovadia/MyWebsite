@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import SimpleNavbar from "./SimpleNavbar";
 
 const TypingSpeedTest = () => {
   const [text, setText] = useState("");
@@ -79,48 +80,54 @@ const TypingSpeedTest = () => {
   };
 
   return (
-    <div className="h-screen p-8 bg-gray-100">
-      <h2 className="text-2xl font-bold mb-4">Typing Speed Test</h2>
-      {!finished && <p className="mb-4">Type the following text:</p>}
-      {!finished && (
-        <p className="mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          tempus erat nec odio consequat semper.
-        </p>
-      )}
-      {finished && (
-        <div className="mb-8">
-          <p>Game Over!</p>
-          <p>
-            Your typing speed: {typingSpeed} WPM ({typingErrors} errors)
+    <div>
+      <section>
+        <div className="Navbar">{<SimpleNavbar />}</div>
+      </section>
+
+      <div className="h-screen p-8 bg-gray-100">
+        <h2 className="text-2xl font-bold mb-4">Typing Speed Test</h2>
+        {!finished && <p className="mb-4">Type the following text:</p>}
+        {!finished && (
+          <p className="mb-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            tempus erat nec odio consequat semper.
           </p>
-          <p>Accuracy: {accuracy}%</p>
-          <button
-            onClick={restartGame}
-            className="bg-blue-500 text-white py-2 px-4 mt-4 rounded hover:bg-blue-700 transition duration-200"
-          >
-            Restart
-          </button>
-        </div>
-      )}
-      {!finished && (
-        <div>
-          <textarea
-            ref={inputRef}
-            value={text}
-            onChange={handleInputChange}
-            onKeyDown={handleInputKeyPress}
-            className="w-full px-4 py-2 mb-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-          />
-          <p>Timer: {timer}s</p>
-          <button
-            onClick={finishGame}
-            className="bg-black text-white py-2 px-4 mt-4 rounded hover:bg-blue-700 transition duration-200"
-          >
-            Finish
-          </button>
-        </div>
-      )}
+        )}
+        {finished && (
+          <div className="mb-8">
+            <p>Game Over!</p>
+            <p>
+              Your typing speed: {typingSpeed} WPM ({typingErrors} errors)
+            </p>
+            <p>Accuracy: {accuracy}%</p>
+            <button
+              onClick={restartGame}
+              className="bg-blue-500 text-white py-2 px-4 mt-4 rounded hover:bg-blue-700 transition duration-200"
+            >
+              Restart
+            </button>
+          </div>
+        )}
+        {!finished && (
+          <div>
+            <textarea
+              ref={inputRef}
+              value={text}
+              onChange={handleInputChange}
+              onKeyDown={handleInputKeyPress}
+              className="w-full px-4 py-2 mb-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            />
+            <p>Timer: {timer}s</p>
+            <button
+              onClick={finishGame}
+              className="bg-black text-white py-2 px-4 mt-4 rounded hover:bg-blue-700 transition duration-200"
+            >
+              Finish
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
