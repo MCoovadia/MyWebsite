@@ -26,6 +26,8 @@ const Calculator = () => {
       setInput(result.toString());
     } catch (error) {
       setDisplayValue("Error");
+    } finally {
+      updateDisplay();
     }
   };
 

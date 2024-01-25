@@ -15,17 +15,21 @@ const About = () => {
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm:text-right text-4xl font-bold">
             <p>
-              Hi. I'm Muhammed Coovadia, nice to meet you. Please take a look
-              around.
+              Hello, I'm Muhammed Coovadia. It's a pleasure to meet you. Feel
+              free to explore.
             </p>
           </div>
           <div>
             <p>
-              I am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?
+              Greetings! I'm passionate about crafting dynamic and user-centric
+              web experiences, and I specialize in leveraging JavaScript and
+              React to bring ideas to life. With a keen eye for detail and a
+              commitment to excellence, I thrive on the challenge of creating
+              seamless and interactive applications. Whether it's collaborating
+              with individuals or contributing to large-scale projects, I am
+              dedicated to delivering solutions that not only meet but exceed
+              expectations. Let's embark on a journey of innovation and
+              creativity together. Welcome to my portfolio!
             </p>
           </div>
         </div>
