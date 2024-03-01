@@ -3,6 +3,7 @@ import Todo from "../assets/ToDo.jpg";
 import Calculator from "../assets/Calculator.jpg";
 import Typing from "../assets/Typing.jpg";
 import Tableau from "../assets/Tableau.PNG";
+import HouseSales from "../assets/HouseSales.PNG";
 
 const Work = () => {
   return (
@@ -31,6 +32,25 @@ const Work = () => {
               </span>
               <div className="pt-8 text-center">
                 <a href="https://public.tableau.com/views/SuperStoreData_17078704325310/Overview?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link">
+                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                    Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{ backgroundImage: `url(${HouseSales})` }}
+            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+          >
+            {/* Hover Effects */}
+            <div className="opacity-0 group-hover:opacity-100">
+              <span className="text-2xl font-bold text-white tracking-wider">
+                House Sales in King County
+              </span>
+              <div className="pt-8 text-center">
+                <a href="https://public.tableau.com/views/HouseSales_17090971799430/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Demo
                   </button>
